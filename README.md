@@ -108,6 +108,8 @@ https://github.com/user-attachments/assets/b4ab35ac-f994-46b1-8957-e82fe87ff0e9
 - **Node.js** >= 20
 - **pnpm** >= 10
 
+> **Safe first run:** `pnpm install` executes this repository's root `postinstall` lifecycle script. It builds workspace packages and runs `scripts/sync-maic-importer.mjs`. Review `package.json` and the referenced scripts before installing code you have not inspected. Keep provider credentials in `.env.local`, never commit real keys, and do not expose a self-hosted instance to an untrusted network without reviewing its authentication and persistence settings.
+
 ### 1. Clone & Install
 
 ```bash
